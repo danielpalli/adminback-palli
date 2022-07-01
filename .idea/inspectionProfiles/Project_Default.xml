@@ -129,7 +129,7 @@
     <inspection_tool class="JSRedundantSwitchStatement" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSReferencingMutableVariableFromClosure" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSRemoveUnnecessaryParentheses" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="JSStringConcatenationToES6Template" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSStringConcatenationToES6Template" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSSuspiciousEqPlus" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSSuspiciousNameCombination" enabled="true" level="ERROR" enabled_by_default="true">
       <group names="x,width,left,right" />
@@ -171,7 +171,7 @@
     <inspection_tool class="NegatedIfStatementJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="NestedAssignmentJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="NestedConditionalExpressionJS" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="NestedFunctionCallJS" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="NestedFunctionCallJS" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="NestedFunctionJS" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="m_includeAnonymousFunctions" value="false" />
     </inspection_tool>
