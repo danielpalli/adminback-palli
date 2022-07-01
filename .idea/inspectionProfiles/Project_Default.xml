@@ -11,7 +11,7 @@
     <inspection_tool class="BreakStatementWithLabelJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="CallerJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ChainedEqualityJS" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="ChainedFunctionCallJS" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="ChainedFunctionCallJS" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="CommaExpressionJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ConditionalExpressionJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ConditionalExpressionWithIdenticalBranchesJS" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -72,9 +72,9 @@
       <option name="m_minLength" value="4" />
       <option name="m_maxLength" value="32" />
     </inspection_tool>
-    <inspection_tool class="FunctionWithInconsistentReturnsJS" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="FunctionWithInconsistentReturnsJS" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="FunctionWithMultipleLoopsJS" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="FunctionWithMultipleReturnPointsJS" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="FunctionWithMultipleReturnPointsJS" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="IfStatementWithIdenticalBranchesJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="IfStatementWithTooManyBranchesJS" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="m_limit" value="3" />
@@ -248,7 +248,7 @@
     <inspection_tool class="UnnecessaryLabelJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UnnecessaryLabelOnBreakStatementJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UnnecessaryLabelOnContinueStatementJS" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="UnnecessaryLocalVariableJS" enabled="true" level="ERROR" enabled_by_default="true">
+    <inspection_tool class="UnnecessaryLocalVariableJS" enabled="false" level="ERROR" enabled_by_default="false">
       <option name="m_ignoreImmediatelyReturnedVariables" value="false" />
       <option name="m_ignoreAnnotatedVariables" value="false" />
     </inspection_tool>
