@@ -1,4 +1,3 @@
-
 import Usuario from "../models/Usuario.js";
 import {generarId} from "../helpers/generarId.js";
 import {generarJWT} from "../helpers/generarJWT.js";
@@ -56,6 +55,70 @@ export const loginUsuario = async (req, res) => {
     })
 };
 
-export const confirmarTokenUsuario = (req, res) => {
-    console.log(req.params.token);
+export const confirmarTokenUsuario = async (req, res) => {
+    const {token} = req.params;
+    const usuario = await Usuario.findOne({token});
+
+    if (!usuario) {
+        const error = new Error('Token no válido');
+        return res.status(404).json({msg: error.message});
+    }
+
+    try {
+        usuario.confirmado = true;
+        usuario.token = '';
+        await usuario.save();
+        res.json({msg: 'Usuario confirmado correctamente'});
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+export const recuperarUsuario = async (req, res) => {
+    const {email} = req.body;
+    const usuario = await Usuario.findOne({email});
+
+    if (!usuario) {
+        const error = new Error('El Usuario no existe');
+        return res.status(400).json({msg: error.message});
+    }
+
+    try {
+        usuario.token = generarId();
+        await usuario.save();
+        res.json({msg: 'Hemos enviado un main con las instrucciones'});
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+export const comprobarTokenUsuario = async (req, res) => {
+    const {token} = req.params;
+    const tokenValido = await Usuario.findOne({token});
+
+    if (!tokenValido) {
+        const error = new Error('Token no válido');
+        return res.status(404).json({msg: error.message});
+    }
+    res.json({msg: "Token valido y el Usuario existe"});
+};
+
+export const nuevoPasswordUsuario = async (req, res) => {
+    const {token} = req.params;
+    const {password} = req.body;
+    const usuario = await Usuario.findOne({token});
+
+    if (!usuario) {
+        const error = new Error('Token no válido');
+        return res.status(404).json({msg: error.message});
+    }
+
+    try {
+        usuario.password = password;
+        usuario.token = '';
+        await usuario.save();
+        res.json({msg: 'Contraseña modificada correctamente'})
+    } catch (e) {
+        console.log(e);
+    }
 };
