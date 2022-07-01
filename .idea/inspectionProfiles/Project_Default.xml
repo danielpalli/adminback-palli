@@ -88,7 +88,7 @@
     <inspection_tool class="JSArrowFunctionBracesCanBeRemoved" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSAssignmentUsedAsCondition" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSBitwiseOperatorUsage" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="JSCheckFunctionSignatures" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSCheckFunctionSignatures" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSClassNamingConvention" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSClosureCompilerSyntax" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSCommentMatchesSignature" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -106,7 +106,7 @@
     <inspection_tool class="JSIgnoredPromiseFromCall" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSIncompatibleTypesComparison" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSJQueryEfficiency" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="JSJoinVariableDeclarationAndAssignment" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSJoinVariableDeclarationAndAssignment" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSLastCommaInArrayLiteral" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSLastCommaInObjectLiteral" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSMethodCanBeStatic" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -145,10 +145,10 @@
     <inspection_tool class="JSUnnecessarySemicolon" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSUnreachableSwitchBranches" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSUnresolvedExtXType" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="JSUnresolvedFunction" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedFunction" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSUnresolvedLibraryURL" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSUnresolvedReactComponent" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="JSUnresolvedVariable" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedVariable" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSUnusedAssignment" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="JSUnusedGlobalSymbols" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="JSUnusedLocalSymbols" enabled="true" level="ERROR" enabled_by_default="true" />

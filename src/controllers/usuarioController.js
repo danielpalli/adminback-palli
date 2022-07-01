@@ -122,3 +122,8 @@ export const nuevoPasswordUsuario = async (req, res) => {
         console.log(e);
     }
 };
+
+export const perfilUsuario = (req, res) => {
+    const {usuario} = req;
+    res.json(usuario);
+};

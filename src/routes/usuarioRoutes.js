@@ -3,7 +3,7 @@ import {
     comprobarTokenUsuario,
     confirmarTokenUsuario,
     crearUsuario, loginUsuario, nuevoPasswordUsuario,
-    obtenerUsuarios, recuperarUsuario,
+    obtenerUsuarios, perfilUsuario, recuperarUsuario,
 } from '../controllers/usuarioController.js';
 import {checkAuth} from "../middleware/checkAuth.js";
 
@@ -16,6 +16,6 @@ router.get('/confirmar/:token', confirmarTokenUsuario);
 router.post('/olvide-password', recuperarUsuario);
 router.route('/olvide-password/:token').get(comprobarTokenUsuario).post(nuevoPasswordUsuario);
 
-
+router.get('/perfil', checkAuth, perfilUsuario);
 
 export default router;
