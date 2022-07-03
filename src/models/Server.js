@@ -7,7 +7,7 @@ export default class Server {
     constructor() {
         this.app = express();
         this.port = 4000;
-        this.usuariosPath = process.env.USUARIOS_PATH;
+        this.usuariosPath = '/api/usuariosg';
         this.databaseConnect();
         this.initCors();
         this.middlewares();
