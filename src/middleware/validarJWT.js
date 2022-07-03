@@ -11,7 +11,7 @@ export const validarJWT = (req, res, next) => {
         });
     }
     try {
-        const {id, nombre, apellido, direccion, telefono, perfil, email} = jwt.verify(token, Aasfmioam29041j0mriasmaop);
+        const {id, nombre, apellido, direccion, telefono, perfil, email} = jwt.verify(token, 'Aasfmioam29041j0mriasmaop');
         req.id = id;
         req.nombre = nombre;
         req.apellido = apellido;
