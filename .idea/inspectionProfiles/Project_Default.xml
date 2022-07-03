@@ -33,7 +33,7 @@
     <inspection_tool class="DuplicateConditionJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="DynamicallyGeneratedCodeJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ES6BindWithArrowFunction" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="ES6CheckImport" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="ES6CheckImport" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="ES6ClassMemberInitializationOrder" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ES6ConvertIndexedForToForOf" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ES6ConvertLetToConst" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -49,7 +49,7 @@
     <inspection_tool class="ES6RedundantNestingInTemplateLiteral" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ES6ShorthandObjectProperty" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ES6TopLevelAwaitExpression" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="ES6UnusedImports" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="ES6UnusedImports" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="EmptyCatchBlockJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="EmptyFinallyBlockJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="EmptyStatementBodyJS" enabled="true" level="ERROR" enabled_by_default="true">

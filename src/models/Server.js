@@ -13,6 +13,7 @@ export default class Server {
         this.middlewares();
         this.routes();
     }
+
     middlewares() {
         this.app.use(express.static('public'));
         this.app.use(express.json());
