@@ -6,7 +6,7 @@ import cors from 'cors';
 export default class Server {
     constructor() {
         this.app = express();
-        this.port = 'vercel.com/danielpalli/adminback-palli';
+        this.port = 4000;
         this.usuariosPath = '/api/usuarios';
         this.databaseConnect();
         this.initCors();
