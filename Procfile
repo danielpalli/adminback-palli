@@ -1,1 +1,1 @@
-web:node index.jsg
+web:node index.js
