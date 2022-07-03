@@ -12,7 +12,6 @@ export default class Server {
         this.initCors();
         this.middlewares();
         this.routes();
-        this.app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'public/index.html')));
     }
 
     middlewares() {
