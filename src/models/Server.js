@@ -6,7 +6,7 @@ import cors from 'cors';
 export default class Server {
     constructor() {
         this.app = express();
-        this.port = process.env.PORT || 4040;
+        this.port = 4000 || 4040;
         this.usuariosPath = '/api/usuarios';
         this.databaseConnect();
         this.initCors();
