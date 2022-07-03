@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import Usuario from '../models/Usuario.js';
 
 export const validarJWT = (req, res, next) => {
+  const JWT_SECRET = 'Aasfmioam29041j0mriasmaop';
   const token = req.header('x-token');
 
   if (!token) {
@@ -12,7 +13,7 @@ export const validarJWT = (req, res, next) => {
   }
   try {
     const { id, nombre, apellido, direccion, telefono, perfil, email } =
-      jwt.verify(token, 'Aasfmioam29041j0mriasmaop');
+      jwt.verify(token, JWT_SECRET);
     req.id = id;
     req.nombre = nombre;
     req.apellido = apellido;
