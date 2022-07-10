@@ -10,8 +10,8 @@ export const obtenerMaterias = async (req, res) => {
 
 export const agregarMateria = async (req, res) => {
   try {
-    const { nombre, horario } = req.body;
-    const existeMateria = await Materia.findOne({ nombre, horario });
+    const { nombre } = req.body;
+    const existeMateria = await Materia.findOne({ nombre });
 
     if (existeMateria) {
       const error = new Error('Materia ya registrada');

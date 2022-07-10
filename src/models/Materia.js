@@ -7,11 +7,12 @@ const materiaSchema = mongoose.Schema(
       trim: true,
       required: true,
     },
-    horario: {
-      type: String,
-      required: true,
-    },
-
+    horario: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     cupo: {
       type: Number,
       required: true,
