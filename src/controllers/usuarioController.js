@@ -213,7 +213,6 @@ export const revalidarToken = async (req, res) => {
   const { id } = req;
 
   const usuario = await Usuario.findById(id);
-
   const token = await generarJWT(id);
 
   return res.json({

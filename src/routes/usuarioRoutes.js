@@ -39,7 +39,6 @@ router
   .get(comprobarTokenUsuario)
   .post(nuevoPasswordUsuario);
 router.get('/renew', validarJWT, revalidarToken);
-
 router.get('/perfil', checkAuth, perfilUsuario);
 
 export default router;
