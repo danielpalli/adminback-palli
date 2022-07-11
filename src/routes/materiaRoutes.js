@@ -1,10 +1,11 @@
 import express from 'express';
-import { agregarMateria, obtenerMaterias } from '../controllers/materiaController.js';
+import { agregarMateria, obtenerMateriaHorario, obtenerMaterias } from '../controllers/materiaController.js';
 import { check } from 'express-validator';
 import { validarCampo } from '../middleware/validarCampo.js';
 const router = express.Router();
 
 router.get('/', obtenerMaterias);
+router.get('/:nombre', obtenerMateriaHorario);
 router.post(
     '/agregar',
     [

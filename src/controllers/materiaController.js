@@ -8,6 +8,15 @@ export const obtenerMaterias = async (req, res) => {
   });
 };
 
+export const obtenerMateriaHorario = async (req, res) => {
+  const { nombre } = req.params;
+ const materia = await Materia.findOne({nombre});
+  res.json({
+    ok: true,
+    materia,
+  });
+};
+
 export const agregarMateria = async (req, res) => {
   try {
     const { nombre } = req.body;
