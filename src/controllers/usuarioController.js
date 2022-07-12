@@ -227,3 +227,86 @@ export const revalidarToken = async (req, res) => {
     token,
   });
 };
+
+export const actualizarUsuario = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const usuario = await Usuario.findById(id);
+
+    if (!usuario) {
+      const error = new Error('El usuario no existe');
+      return res.status(404).json({
+        ok: false,
+        msg: error.message,
+      });
+    }
+
+    const {
+      email,
+      password,
+      token,
+      confirmado,
+      createdAt,
+      updatedAt,
+      ...campos
+    } = req.body;
+
+    if (usuario.email !== email) {
+      const existeEmail = await Usuario.findOne({ email });
+      if (existeEmail) {
+        const error = new Error('El email ya existe');
+        return res.status(400).json({
+          ok: false,
+          msg: error.message,
+        });
+      }
+    }
+
+    campos.email = email;
+
+    const usuarioActualizado = await Usuario.findByIdAndUpdate(id, campos, {
+      new: true,
+    });
+
+    await usuarioActualizado.save();
+
+    res.json({
+      ok: true,
+      usuarioActualizado,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      ok: false,
+      msg: 'Por favor hable con el administrador',
+    });
+  }
+};
+
+export const eliminarUsuario = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const usuario = await Usuario.findByIdAndDelete(id);
+
+    if (!usuario) {
+      const error = new Error('El usuario no existe');
+      return res.status(404).json({
+        ok: false,
+        msg: error.message,
+      });
+    }
+    
+    res.json({
+      ok: true,
+      msg: 'Usuario eliminado correctamente',
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      ok: false,
+      msg: 'Por favor hable con el administrador',
+    });
+  }
+};

@@ -1,8 +1,10 @@
 import express from 'express';
 import {
+  actualizarUsuario,
   comprobarTokenUsuario,
   confirmarTokenUsuario,
   crearUsuario,
+  eliminarUsuario,
   loginUsuario,
   nuevoPasswordUsuario,
   obtenerUsuarios,
@@ -40,5 +42,21 @@ router
   .post(nuevoPasswordUsuario);
 router.get('/renew', validarJWT, revalidarToken);
 router.get('/perfil', checkAuth, perfilUsuario);
+router.put(
+  '/:id',
+  [
+    validarJWT,
+    check('nombre', 'El nombre es obligatorio').not().isEmpty(),
+    check('apellido', 'El apellido es obligatorio').not().isEmpty(),
+    check('direccion', 'La dirección es obligatoria').not().isEmpty(),
+    check('telefono', 'El telefono es obligatorio').not().isEmpty(),
+    check('email', 'El email es obligatorio').isEmail(),
+    check('perfil', 'El perfil es obligatorio').not().isEmpty(),
+    validarCampo,
+  ],
+  actualizarUsuario
+);
+router.delete('/:id', validarJWT, eliminarUsuario);
 
 export default router;
+
