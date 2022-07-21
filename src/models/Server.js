@@ -1,7 +1,7 @@
 import express from 'express';
 import { conectarDB } from '../config/db.js';
 import usuarioRoutes from '../routes/usuarioRoutes.js';
-import materiaRoutes from '../routes/materiaRoutes.js';
+import cursoRoutes from '../routes/cursoRoutes.js';
 import cors from 'cors';
 
 export default class Server {
@@ -9,7 +9,7 @@ export default class Server {
     this.app = express();
     this.port = 4000;
     this.usuariosPath = '/api/usuarios';
-    this.materiasPath = '/api/materias';
+    this.cursosPath = '/api/cursos';
     this.databaseConnect();
     this.initCors();
     this.middlewares();
@@ -30,7 +30,7 @@ export default class Server {
 
   routes() {
     this.app.use(this.usuariosPath, usuarioRoutes);
-    this.app.use(this.materiasPath, materiaRoutes);
+    this.app.use(this.cursosPath, cursoRoutes);
   }
 
   listen() {

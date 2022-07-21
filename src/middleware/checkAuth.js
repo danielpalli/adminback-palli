@@ -14,7 +14,7 @@ export const checkAuth = async (req, res, next) => {
       const decoded = jwt.verify(token, JWT_SECRET);
 
       req.usuario = await Usuario.findById(decoded.id).select(
-        '-password -confirmado -token -createdAt -updatedAt -__v'
+        '-password -token -createdAt -updatedAt -__v'
       );
       return next();
     } catch (e) {

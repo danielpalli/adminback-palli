@@ -1,15 +1,11 @@
 import express from 'express';
 import {
   actualizarUsuario,
-  comprobarTokenUsuario,
-  confirmarTokenUsuario,
   crearUsuario,
   eliminarUsuario,
   loginUsuario,
-  nuevoPasswordUsuario,
   obtenerUsuarios,
   perfilUsuario,
-  recuperarUsuario,
   revalidarToken,
 } from '../controllers/usuarioController.js';
 import { checkAuth } from '../middleware/checkAuth.js';
@@ -29,17 +25,13 @@ router.post(
     check('telefono', 'El telefono es obligatorio').not().isEmpty(),
     check('email', 'El email es obligatorio').isEmail(),
     check('password', 'La contraseña es obligatoria').not().isEmpty(),
+    check('perfil', 'El perfil es obligatorio').not().isEmpty(),
+    check('sexo', 'El sexo es obligatorio').not().isEmpty(),
     validarCampo,
   ],
   crearUsuario
 );
 router.post('/login', loginUsuario);
-router.get('/confirmar/:token', confirmarTokenUsuario);
-router.post('/olvide-password', recuperarUsuario);
-router
-  .route('/olvide-password/:token')
-  .get(comprobarTokenUsuario)
-  .post(nuevoPasswordUsuario);
 router.get('/renew', validarJWT, revalidarToken);
 router.get('/perfil', checkAuth, perfilUsuario);
 router.put(
