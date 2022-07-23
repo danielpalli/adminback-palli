@@ -21,6 +21,10 @@ const cursoSchema = mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    fechaFin: {
+      type: Date,
+      default: Date.now,
+    },
     cupo: {
       type: Number,
       required: true,

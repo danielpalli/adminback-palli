@@ -1,10 +1,7 @@
 import { Curso } from '../models/Curso.js';
 
 export const obtenerCursos = async (req, res) => {
-  const cursos = await Curso.find(
-    {},
-    'nombre horario comision cupo estado docente alumnos'
-  );
+  const cursos = await Curso.find().where('docente').equals(req.usuario);
   res.json({
     ok: true,
     cursos,
