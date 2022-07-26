@@ -50,13 +50,13 @@ export const obtenerCurso = async (req, res) => {
     });
   }
 
-  if (curso.docente.toString() !== req.usuario._id.toString()) {
-    const error = new Error('No tienes permisos para ver este curso');
-    return res.status(401).json({
-      ok: false,
-      msg: error.message,
-    });
-  }
+  // if (curso.docente.toString() !== req.usuario._id.toString()) {
+  //   const error = new Error('No tienes permisos para ver este curso');
+  //   return res.status(401).json({
+  //     ok: false,
+  //     msg: error.message,
+  //   });
+  // }
 
   res.json({
     ok: true,

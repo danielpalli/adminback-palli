@@ -4,6 +4,7 @@ import {
   crearUsuario,
   eliminarUsuario,
   loginUsuario,
+  obtenerUsuario,
   obtenerUsuarios,
   perfilUsuario,
   revalidarToken,
@@ -16,6 +17,8 @@ import { validarJWT } from '../middleware/validarJWT.js';
 const router = express.Router();
 
 router.get('/', obtenerUsuarios);
+router.get('/info/:id', obtenerUsuario);
+
 router.post(
   '/crear',
   [

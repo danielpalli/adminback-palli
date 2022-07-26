@@ -196,3 +196,30 @@ export const eliminarUsuario = async (req, res) => {
     });
   }
 };
+
+export const obtenerUsuario = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const usuario = await Usuario.findById(id);
+
+    if (!usuario) {
+      const error = new Error('El usuario no existe');
+      return res.status(404).json({
+        ok: false,
+        msg: error.message,
+      });
+    }
+
+    res.json({
+      ok: true,
+      usuario,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      ok: false,
+      msg: 'Por favor hable con el administrador',
+    });
+  }
+};
